@@ -114,24 +114,24 @@ export default function Testimonials() {
                 ref={scrollContainerRef}
             >
                 <TestimonialsCard
-                    image={"/images/review_1.jpg"}
-                    name={"Emily Johnson"}
+                    image={"/images/review_2.jpg"}
+                    name={"Samantha R."}
                     desc={
-                        "Lorem dlkvdvids ejvd nmdhcods  9poj;fsdo;vjs dscieod"
+                        "PawZcozy has transformed our weekends! Winning last month’s ‘Best Trick’ contest was a highlight for my pup, Milo!"
                     }
                 />
                 <TestimonialsCard
-                    image={"/images/review_2.jpg"}
-                    name={"Emily Johnson"}
+                    image={"/images/review_1.jpg"}
+                    name={"Jordan K."}
                     desc={
-                        "Lorem dlkvdvids ejvd nmdhcods  9poj;fsdo;vjs dscieod Lorem dlkvdvids ejvd nmdhcods  9poj;fsdo;vjs dscieod Lorem dlkvdvids ejvd nmdhcods  9poj;fsdo;vjs dscieod Lorem dlkvdvids ejvd nmdhcods  9poj;fsdo;vjs dscieod Lorem dlkvdvids ejvd nmdhcods  9poj;fsdo;vjs dscieod"
+                        "As a pet sitter, PawZcozy is invaluable. It’s great for connecting with the pet community and the contests are a delightful bonus!"
                     }
                 />
                 <TestimonialsCard
                     image={"/images/review_3.jpg"}
-                    name={"Emily Johnson"}
+                    name={"Alex J."}
                     desc={
-                        "Lorem dlkvdvids ejvd nmdhcods  9poj;fsdo;vjs dscieod"
+                        "I love this app! The community groups are supportive, and the contests add a fun challenge for showcasing our pets."
                     }
                 />
                 <TestimonialsCard

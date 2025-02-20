@@ -1,3 +1,4 @@
+import NextTopLoader from "nextjs-toploader";
 import HeroSection from "./components/HomeComponents/HeroSection";
 import Testimonials from "./components/HomeComponents/Testimonials";
 
