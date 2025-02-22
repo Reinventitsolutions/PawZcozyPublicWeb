@@ -3,12 +3,13 @@ import { Image } from "@nextui-org/image";
 export default function page() {
   return (
     <>
-      <div className="extra-large:w-3/4 flex items-start justify-center py-16 gap-16 large:w-4/5">
+      <div className="w-full flex compact:w-full compact:gap-8 medium:flex-col expanded:flex-row large:w-4/5 extra-large:w-3/4 items-start justify-center py-16 gap-16 p-8">
         <div className="flex flex-col gap-8">
-          <div className="extra-large:text-7xl large:text-6xl text-surface-foreground">
+        <div className="text-4xl compact:text-4xl medium:text-5xl expanded:text-6xl large:text-6xl extra-large:text-7xl text-surface-foreground">
+
             About Us
           </div>
-          <div className="extra-large:text-xl large:text-lg text-secondary">
+          <div className="text-sm compact:text-sm medium:text-base expanded:text-lg large:text-lg extra-large:text-xl text-secondary">
             At PawZcozy, we believe every pet deserves to shine! 🌟 Founded with
             a passion for pets and their unique stories, our platform is more
             than just a social app—it's a vibrant community where pet lovers
@@ -17,14 +18,16 @@ export default function page() {
           </div>
         </div>
         <div>
-          <Image
-            src="/images/about_pic.jpg"
-            className="extra-large:max-h-[450px] extra-large:max-w-[650px] large:max-h-[300px] max-w-[550px]"
-            removeWrapper
-          />
+        <Image
+  src="/images/about_pic.jpg"
+  className="block compact:hidden medium:hidden expanded:block large:max-h-[300px] large:max-w-[550px] extra-large:max-h-[450px] extra-large:max-w-[650px]"
+  removeWrapper
+/>
+
         </div>
       </div>
-      <div className="w-full flex items-stretch justify-center bg-surface-surfaceContainer border-y-1 border-utils-outlineVariant">
+      <div className="flex flex-col compact:flex-col medium:flex-col expanded:flex-row large:flex-row extra-large:flex-row justify-center items-stretch bg-surface-surfaceContainer border-y border-utils-outlineVariant">
+
         <div className="w-full flex flex-col gap-5 border-r-1 border-utils-outlineVariant py-14 pr-14 pl-16">
           <div className="text-3xl">Our Mission</div>
           <div className="w-[30px] h-[3px] bg-primary"></div>

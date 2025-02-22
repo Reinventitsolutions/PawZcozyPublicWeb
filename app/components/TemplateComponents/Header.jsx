@@ -15,13 +15,11 @@ export default function Header() {
 
     const isHiddenRoute = pathname === "/eula" || pathname === "/policy";
 
-
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
         };
 
-        
         window.addEventListener("scroll", handleScroll);
 
         return () => {
@@ -41,43 +39,48 @@ export default function Header() {
                     : "bg-surface"
             }`}
         >
-            <Link href="/" className="flex items-center h-full gap-3">
-                <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center">
-                    <Image src={'/logos/logo.png'} width={'40'} height={'40'} alt="logo" />
+            <Link href="/" className="flex items-center h-full gap-3 ">
+                <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center compact:w-[30px] compact:h-[30px]">
+                    <Image
+                        src={"/logos/logo.png"}
+                        width={"40"}
+                        height={"40"}
+                        alt="logo"
+                    />
                 </div>
                 <div className="text-2xl text-surface-foreground">PawZcozy</div>
             </Link>
-            <div className="w-full max-w-[500px] flex items-center justify-center">
+            <div className="w-full max-w-[500px] flex items-center justify-center compact:hidden">
                 <NavBar />
             </div>
 
             {!isHiddenRoute && (
-            <div className="flex items-center gap-3">
-                <ThemeSwitcher />
+                <div className="flex items-center gap-3 ">
+                    <ThemeSwitcher />
 
-                <Button
-                    variant="solid"
-                    color="primary"
-                    radius="full"
-                    size="lg"
-                    startContent={
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="size-6"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    }
-                >
-                    Download
-                </Button>
-            </div>
+                    <Button
+                        variant="solid"
+                        color="primary"
+                        radius="full"
+                        size="lg"
+                        startContent={
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="size-6 compact:size-4"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        }
+                    >
+                        Download
+                    </Button>
+                </div>
             )}
         </div>
     );

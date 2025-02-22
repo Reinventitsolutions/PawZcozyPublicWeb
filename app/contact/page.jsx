@@ -4,8 +4,8 @@ import ContactForm from "./ContactForm";
 
 export default function page() {
     return (
-        <div className="extra-large:w-3/4 large:w-4/5 flex items-stretch justify-center gap-8 h-auto">
-            <div className="w-1/2 flex-1 p-8 rounded-3xl bg-surface-surfaceContainerLowest flex flex-col gap-4">
+        <div className="w-full compact:flex-col medium:flex-col expanded:flex-row large:w-4/5 extra-large:w-3/4 flex items-stretch justify-center gap-8 h-auto p-6">
+            <div className="w-full compact:w-full medium:w-full expanded:w-1/2 flex-1 p-6 compact:p-4 medium:p-6 rounded-3xl bg-surface-surfaceContainerLowest flex flex-col gap-4">
                 <div className="text-primary text-md font-medium">
                     Get in Touch
                 </div>
@@ -19,15 +19,14 @@ export default function page() {
                 <Divider />
                 <ContactForm />
             </div>
-            <div className="w-1/2 flex-1 flex flex-col justify-between gap-8">
+            <div className="w-full compact:w-full medium:w-full expanded:w-1/2 flex-1 flex flex-col justify-between gap-8">
                 <div className="flex flex-1 w-full items-center justify-center rounded-3xl bg-surface-surfaceContainer/50 overflow-hidden">
                     <Image
                         src="/images/contact_pic_3.jpg"
                         removeWrapper
-                        height={"100%"}
-                        width={"100%"}
-                        className="object-cover"
-                    />
+                        className="object-cover h-full w-full compact:hidden medium:h-[300px] large:h-full"
+                    />{" "}
+                    {/*compact:h-[250px]*/}
                 </div>
                 <div className="w-full flex flex-col p-4 bg-surface-surfaceContainerLowest rounded-3xl gap-4">
                     <div className="w-full bg-surface-surfaceContainerLow rounded-2xl flex items-center justify-start gap-4 p-4">
@@ -52,7 +51,7 @@ export default function page() {
                         </div>
                     </div>
                     {/* <div className="w-full bg-surface-surfaceContainerLow rounded-2xl flex items-center justify-start gap-4 p-4"> */}
-                        {/* <div className="p-2 flex items-center justify-center rounded-full bg-primary-primaryContainer text-primary">
+                    {/* <div className="p-2 flex items-center justify-center rounded-full bg-primary-primaryContainer text-primary">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -66,7 +65,7 @@ export default function page() {
                                 />
                             </svg>
                         </div> */}
-                        {/* <div className="flex flex-col">
+                    {/* <div className="flex flex-col">
                             <div className="text-lg font-medium text-surface-foreground">
                                 Phone
                             </div>
@@ -90,7 +89,7 @@ export default function page() {
                                 />
                             </svg>
                         </div> */}
-                        {/* <div className="flex flex-col">
+                    {/* <div className="flex flex-col">
                             <div className="text-lg font-medium text-surface-foreground">
                                 Address
                             </div>

@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import TestimonialsCard from "./TestimonialsCard";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { Button } from "@nextui-org/button";
+import { useMediaQuery } from "react-responsive";
 
 export default function Testimonials() {
     const scrollContainerRef = useRef(null);
@@ -51,9 +52,15 @@ export default function Testimonials() {
         }
     };
 
+    const isCompact = useMediaQuery({ maxWidth: 599 });
+    const isMedium = useMediaQuery({ minWidth: 600, maxWidth: 839 });
+    const isExpanded = useMediaQuery({ minWidth: 840, maxWidth: 1199 });
+    const isLarge = useMediaQuery({ minWidth: 1200, maxWidth: 1599 });
+    const isExtraLarge = useMediaQuery({ minWidth: 1600 });
+
     return (
-        <div className="w-4/5 flex gap-10 items-start justify-start py-20">
-            <div className="min-h-[350px] w-[325px] flex flex-col gap-3 justify-between pb-10">
+        <div className="w-4/5 flex gap-10 items-start justify-start py-20 medium:flex-col compact:flex-col">
+            {isCompact || isMedium ? (
                 <div className="flex flex-col w-full">
                     <div className="text-5xl w-full text-surface-foreground">
                         Already downloaded?
@@ -62,51 +69,62 @@ export default function Testimonials() {
                         Learn more about what you can do on PawZcozy.
                     </div>
                 </div>
-                <div className="w-full flex items-center justify-start gap-5">
-                    <Button
-                        isIconOnly
-                        color="primary"
-                        variant="solid"
-                        radius="full"
-                        onPress={() => scrollLeft()}
-                        isDisabled={isLeftDisabled}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="size-6"
+            ) : (
+                <div className="min-h-[350px] w-[325px] flex flex-col gap-3 justify-between pb-10">
+                    <div className="flex flex-col w-full">
+                        <div className="text-5xl w-full text-surface-foreground">
+                            Already downloaded?
+                        </div>
+                        <div className="text-md w-full text-surface-foreground">
+                            Learn more about what you can do on PawZcozy.
+                        </div>
+                    </div>
+                    <div className="w-full flex items-center justify-start gap-5">
+                        <Button
+                            isIconOnly
+                            color="primary"
+                            variant="solid"
+                            radius="full"
+                            onPress={() => scrollLeft()}
+                            isDisabled={isLeftDisabled}
                         >
-                            <path
-                                fillRule="evenodd"
-                                d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    </Button>
-                    <Button
-                        isIconOnly
-                        color="primary"
-                        variant="solid"
-                        radius="full"
-                        onPress={() => scrollRight()}
-                        isDisabled={isRightDisabled}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="size-6"
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="size-6"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </Button>
+                        <Button
+                            isIconOnly
+                            color="primary"
+                            variant="solid"
+                            radius="full"
+                            onPress={() => scrollRight()}
+                            isDisabled={isRightDisabled}
                         >
-                            <path
-                                fillRule="evenodd"
-                                d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    </Button>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="size-6"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </Button>
+                    </div>
                 </div>
-            </div>
+            )}
             <ScrollShadow
                 orientation="horizontal"
                 className="h-full flex gap-[20px] pr-[20px]"
@@ -150,6 +168,56 @@ export default function Testimonials() {
                 />
                 {/* <div className="w-[20px] h-[20px] opacity-0">vdavnd</div> */}
             </ScrollShadow>
+            {
+                isCompact || isMedium ? (
+                    <div className="w-full flex items-center justify-start gap-5">
+                        <Button
+                            isIconOnly
+                            color="primary"
+                            variant="solid"
+                            radius="full"
+                            onPress={() => scrollLeft()}
+                            isDisabled={isLeftDisabled}
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="size-6"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </Button>
+                        <Button
+                            isIconOnly
+                            color="primary"
+                            variant="solid"
+                            radius="full"
+                            onPress={() => scrollRight()}
+                            isDisabled={isRightDisabled}
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="size-6"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </Button>
+                    </div>
+                ) : (
+                    <></>
+                )
+            }
         </div>
     );
 }

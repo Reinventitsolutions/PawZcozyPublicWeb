@@ -11,9 +11,9 @@ export default function Home() {
         borderBottomRightRadius: "40px",
       }}
     >
-      <div className="flex flex-col items-end w-full gap-10">
+      <div className="flex flex-col items-end w-full gap-10 compact:items-center">
         <HeroSection />
-        <div className="flex items-center justify-end w-full bg-surface">
+        <div className="flex items-center justify-end w-full bg-surface compact:justify-center">
           <Testimonials />
         </div>
       </div>

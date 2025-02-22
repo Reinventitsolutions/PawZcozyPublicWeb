@@ -16,11 +16,11 @@ export default {
       },
     },
     screens: {
-      'compact' : '0px',
-      'medium' : '600px',
-      'expanded' : '840px',
-      'large' : '1200px',
-      'extra-large' : '1600px'
+      'compact': {'max': '599px'},       // Phone in portrait
+      'medium': {'min': '600px', 'max': '839px'},  // Tablet in portrait
+      'expanded': {'min': '840px', 'max': '1199px'}, // Phone landscape, tablet landscape, desktop
+      'large': {'min': '1200px', 'max': '1599px'}, // Desktop
+      'extra-large': {'min': '1600px'}, // Ultra-wide desktop
     },
   },
   darkMode: "class",

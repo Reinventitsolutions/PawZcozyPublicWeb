@@ -8,7 +8,7 @@ export default function NavBarTab({ name, link }) {
   const pathname = usePathname();
 
   return (
-    <div className='group relative inline-block cursor-pointer' onClick={() => router.push(link)}>
+    <div className='group relative inline-block cursor-pointer whitespace-nowrap' onClick={() => router.push(link)}>
         <div className='text-lg text-surface-foreground'>
             {name}
         </div>
