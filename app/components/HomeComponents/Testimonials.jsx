@@ -60,7 +60,7 @@ export default function Testimonials() {
 
     return (
         <div className="w-4/5 flex gap-10 items-start justify-start py-20 medium:flex-col compact:flex-col">
-            {isCompact || isMedium ? (
+           {(isCompact || isMedium) && scrollContainerRef.current ? (
                 <div className="flex flex-col w-full">
                     <div className="text-5xl w-full text-surface-foreground">
                         Already downloaded?
