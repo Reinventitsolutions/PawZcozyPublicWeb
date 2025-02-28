@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/image";
 export default function page() {
   return (
     <>
-      <div className="w-full flex compact:w-full compact:gap-8 medium:flex-col expanded:flex-row large:w-4/5 extra-large:w-3/4 items-start justify-center py-16 gap-16 p-8">
+      <div className="w-full flex compact:w-full compact:gap-8 compact:py-6 medium:flex-col expanded:flex-row large:w-4/5 extra-large:w-3/4 items-start justify-center py-16 gap-16 p-8">
         <div className="flex flex-col gap-8">
         <div className="text-4xl compact:text-4xl medium:text-5xl expanded:text-6xl large:text-6xl extra-large:text-7xl text-surface-foreground">
 
@@ -28,7 +28,7 @@ export default function page() {
       </div>
       <div className="flex flex-col compact:flex-col medium:flex-col expanded:flex-row large:flex-row extra-large:flex-row justify-center items-stretch bg-surface-surfaceContainer border-y border-utils-outlineVariant">
 
-        <div className="w-full flex flex-col gap-5 border-r-1 border-utils-outlineVariant py-14 pr-14 pl-16">
+        <div className="w-full flex flex-col gap-5 border-r-1 border-utils-outlineVariant compact:py-7 py-14 pr-14 pl-16">
           <div className="text-3xl">Our Mission</div>
           <div className="w-[30px] h-[3px] bg-primary"></div>
           <div className="text-lg text-surface-foreground font-light">
@@ -38,7 +38,7 @@ export default function page() {
             tips, PawZcozy is here to make every pawprint count.
           </div>
         </div>
-        <div className="w-full flex flex-col gap-5 border-r-1 border-utils-outlineVariant py-14 pr-14 pl-14">
+        <div className="w-full flex flex-col gap-5 border-r-1 border-utils-outlineVariant compact:py-7 py-14  pr-14 pl-14">
           <div className="text-3xl">Why We Exist</div>
           <div className="w-[30px] h-[3px] bg-warning"></div>
           <div className="text-lg text-surface-foreground font-light">
@@ -48,7 +48,7 @@ export default function page() {
             with a like-minded community that understands your passion.
           </div>
         </div>
-        <div className="w-full flex flex-col gap-5 py-14 pl-14 pr-16">
+        <div className="w-full flex flex-col gap-5 compact:py-7 py-14 pl-14 pr-16">
           <div className="text-3xl">Our Community</div>
           <div className="w-[30px] h-[3px] bg-success"></div>
           <div className="text-lg text-surface-foreground font-light">

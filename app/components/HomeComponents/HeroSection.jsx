@@ -9,9 +9,9 @@ export default function HeroSection() {
   return (
     <div className="w-4/5 flex gap-10 items-start compact:flex-col">
       <div className="flex items-center w-full compact:max-w-full medium:max-w-[750px]">
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 compact:gap-6">
           <div className="flex flex-col gap-3">
-          <div className="compact:text-4xl medium:text-5xl large:text-6xl text-surface-foreground">
+          <div className="compact:text-4xl medium:text-5xl large:text-6xl extra-large:text-6xl text-surface-foreground">
               Download PawZcozy
             </div>
             <div className="text-medium text-utils-outline pr-10">

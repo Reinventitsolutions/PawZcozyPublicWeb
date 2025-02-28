@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function layout({ children }) {
   return (
-    <div className="w-full flex items-center justify-center bg-surface py-10">
+    <div className="w-full flex items-center justify-center bg-surface py-10 compact:py-3">
       {children}
     </div>
   );

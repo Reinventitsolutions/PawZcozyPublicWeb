@@ -3,9 +3,10 @@ import { Divider } from "@nextui-org/divider";
 import ContactForm from "./ContactForm";
 
 export default function page() {
+    
     return (
-        <div className="w-full compact:flex-col medium:flex-col expanded:flex-row large:w-4/5 extra-large:w-3/4 flex items-stretch justify-center gap-8 h-auto p-6">
-            <div className="w-full compact:w-full medium:w-full expanded:w-1/2 flex-1 p-6 compact:p-4 medium:p-6 rounded-3xl bg-surface-surfaceContainerLowest flex flex-col gap-4">
+        <div className="w-full compact:flex-col medium:flex-col expanded:flex-row large:w-4/5 extra-large:w-3/4 flex items-stretch justify-center gap-8 h-auto p-6 compact:p-3">
+            <div className="w-full compact:w-full medium:w-full expanded:w-1/2 flex-1 p-6 compact:p-3 medium:p-6 rounded-3xl bg-surface-surfaceContainerLowest flex flex-col gap-4">
                 <div className="text-primary text-md font-medium">
                     Get in Touch
                 </div>
@@ -28,7 +29,7 @@ export default function page() {
                     />{" "}
                     {/*compact:h-[250px]*/}
                 </div>
-                <div className="w-full flex flex-col p-4 bg-surface-surfaceContainerLowest rounded-3xl gap-4">
+                <div className="w-full flex flex-col p-4 bg-surface-surfaceContainerLowest rounded-3xl gap-4 compact:hidden">
                     <div className="w-full bg-surface-surfaceContainerLow rounded-2xl flex items-center justify-start gap-4 p-4">
                         <div className="p-2 flex items-center justify-center rounded-full bg-primary-primaryContainer text-primary">
                             <svg
@@ -41,7 +42,7 @@ export default function page() {
                                 <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                             </svg>
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col ">
                             <div className="text-lg font-medium text-surface-foreground">
                                 Email
                             </div>
