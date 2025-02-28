@@ -1,12 +1,14 @@
 {
-  "name": "pawzcozy-next",
+  "name": "pawzcozy_web_public",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "development": "npm run build && cd .next && aws s3 sync . s3://pawzcozyweb --profile pawzcozy",
+    "production": "npm run build && aws s3 sync .next/static/ s3://pawzcozywebpublicus/_next/static/ --profile pawzcozy && aws s3 sync .next/standalone/ s3://pawzcozywebpublicus/ --profile pawzcozy"
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.8",
@@ -28,5 +30,9 @@
     "eslint-config-next": "15.1.2",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "author": "Deep Panchal",
+  "license": "ISC"
 }
