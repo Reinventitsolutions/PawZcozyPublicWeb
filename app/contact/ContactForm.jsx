@@ -236,35 +236,35 @@ export default function ContactForm() {
       .required("You must accept the privacy policy"),
   });
 
-  // const handleEmailSubmit = async (values, resetForm) => {
-  //   const formData = new FormData();
-  //   formData.append("access_key", "8fd78905-d4e2-4bfa-83b7-80f4c9f9746a"); // Replace with your Access Key
-  //   formData.append("firstName", values.firstName);
-  //   formData.append("lastName", values.lastName);
-  //   formData.append("email", values.email);
-  //   formData.append("message", values.message);
+  const handleEmailSubmit = async (values, resetForm) => {
+    const formData = new FormData();
+    formData.append("access_key", "8fd78905-d4e2-4bfa-83b7-80f4c9f9746a"); // Replace with your Access Key
+    formData.append("firstName", values.firstName);
+    formData.append("lastName", values.lastName);
+    formData.append("email", values.email);
+    formData.append("message", values.message);
 
-  //   try {
-  //     const response = await fetch("https://api.web3forms.com/submit", {
-  //       method: "POST",
-  //       body: formData,
-  //     });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-  //     const result = await response.json();
+      const result = await response.json();
 
-  //     if (result.success) {
-  //       setSuccessMessage("Message sent successfully!");
-  //       setErrorMessage("");
-  //       resetForm();
-  //     } else {
-  //       setErrorMessage("Failed to send message. Please try again.");
-  //       setSuccessMessage("");
-  //     }
-  //   } catch (error) {
-  //     setErrorMessage("An error occurred. Please try again.");
-  //     console.error(error);
-  //   }
-  // };
+      if (result.success) {
+        setSuccessMessage("Message sent successfully!");
+        setErrorMessage("");
+        resetForm();
+      } else {
+        setErrorMessage("Failed to send message. Please try again.");
+        setSuccessMessage("");
+      }
+    } catch (error) {
+      setErrorMessage("An error occurred. Please try again.");
+      console.error(error);
+    }
+  };
 
   return (
     <div className="flex items-center justify-between w-full">
