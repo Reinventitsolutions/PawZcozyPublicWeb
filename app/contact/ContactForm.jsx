@@ -238,7 +238,7 @@ export default function ContactForm() {
 
   const handleEmailSubmit = async (values, resetForm) => {
     const formData = new FormData();
-    formData.append("access_key", "8fd78905-d4e2-4bfa-83b7-80f4c9f9746a"); // Replace with your Access Key
+    formData.append("access_key", "6378dc71-6750-41e1-9c28-f5a461696e41");
     formData.append("firstName", values.firstName);
     formData.append("lastName", values.lastName);
     formData.append("email", values.email);

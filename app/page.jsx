@@ -5,7 +5,7 @@ import Testimonials from "./components/HomeComponents/Testimonials";
 export default function Home() {
   return (
     <div
-      className="flex items-center pt-16 justify-end w-full h-full bg-surface-surfaceContainer overflow-hidden compact:pt-4"
+      className="flex items-center pt-2 justify-end w-full h-full bg-surface-surfaceContainer overflow-hidden compact:pt-4"
       style={{
         borderBottomLeftRadius: "40px",
         borderBottomRightRadius: "40px",

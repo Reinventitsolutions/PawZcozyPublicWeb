@@ -1,4 +1,5 @@
 import AndroidPhone from "../phones/AndroidPhone";
+import AndroidPhone1 from "../phones/AndroidPhone1";
 // import Iphone from "../phones/Iphone";
 import RatingStars from "../Rating/RatingStars";
 
@@ -11,7 +12,7 @@ export default function HeroSection() {
       <div className="flex items-center w-full compact:max-w-full medium:max-w-[750px]">
         <div className="flex flex-col gap-8 compact:gap-6">
           <div className="flex flex-col gap-3">
-          <div className="compact:text-4xl medium:text-5xl large:text-6xl extra-large:text-6xl text-surface-foreground">
+            <div className="compact:text-4xl medium:text-5xl large:text-6xl extra-large:text-6xl text-surface-foreground">
               Download PawZcozy
             </div>
             <div className="text-medium text-utils-outline pr-10">
@@ -54,8 +55,9 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="flex compact:flex-col compact:gap-6 medium:flex-row medium:gap-10 items-center justify-center w-full">
+      <div className="flex compact:flex-col compact:gap-6 medium:flex-row medium:gap-10 gap-4 items-center justify-center w-full">
         <AndroidPhone />
+        <AndroidPhone1 />
         {/* <Iphone /> */}
       </div>
     </div>
