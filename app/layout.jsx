@@ -19,7 +19,11 @@ export default function RootLayout({ children }) {
             className="flex flex-col bg-surface-surfaceContainerHighest relative"
             style={{ height: "100%", width: "100%" }}
           >
-            <Header />
+            <Header>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7596111115934322"
+            crossorigin="anonymous"></script>
+            </Header>
+                      
             <NextTopLoader
               color="#2299DD"
               initialPosition={0.08}
