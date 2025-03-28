@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.app.pawzcozy",
+      "sha256_cert_fingerprints": [
+        "75:10:0F:BB:9A:08:12:3D:DA:43:14:D0:6C:53:E8:FE:96:B8:CC:FD:E1:FC:9F:D2:FD:22:D1:22:7F:FB:C0:6A"
+      ]
+    }
+  }
+]
